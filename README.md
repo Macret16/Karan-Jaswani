@@ -1,0 +1,7 @@
+- 👋 Hi, I’m Karan Jaswani
+- 👀 I’m interested in Programming
+- 🌱 I’m currently learning various technologies
+- 💞️ I’m looking to collaborate on Building creative things
+- 📫 Reach me : https://www.linkedin.com/in/karan-jaswani/
+- 😄 Pronouns: He/Him
+- ⚡ Fun fact: I love to play games!
