@@ -4,4 +4,4 @@
 - 💞️ I’m looking to collaborate on Building creative things
 - 📫 Reach me : https://www.linkedin.com/in/karan-jaswani/
 - 😄 Pronouns: He/Him
-- ⚡ Fun fact: I love to play games!
+- ⚡ Real fact: I love to play games!
