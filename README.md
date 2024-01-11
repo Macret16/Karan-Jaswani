@@ -5,4 +5,4 @@
 - 📫 Reach me : https://www.linkedin.com/in/karan-jaswani/
 - 😄 Pronouns : He/Him
 - ⚡ Real fact : I love to play games!
-- 💲 Support my work : Paypal - https://paypal.me/macret167?country.x=IN&locale.x=en_GB
+- 💲 Support my work : Paypal - https://paypal.me/macret167
