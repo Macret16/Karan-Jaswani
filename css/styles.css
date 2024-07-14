@@ -139,4 +139,17 @@ p {
     h2 {
         font-size: 1.5em;
     }
+
+    /* Styles for .open class */
+    .sidebar.open {
+        width: 220px; /* Adjust as needed */
+    }
+
+    .sidebar.open .menu-toggle {
+        background-color: #333333; /* Highlight menu toggle background when sidebar open */
+    }
+
+    .sidebar.open ul {
+        display: flex; /* Show menu links */
+    }
 }
