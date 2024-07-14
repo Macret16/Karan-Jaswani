@@ -30,9 +30,7 @@ body {
     color: #ffffff;
     text-decoration: none;
     font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     transition: color 0.3s, background-color 0.3s;
     padding: 10px;
     border-radius: 50px;
@@ -55,7 +53,7 @@ body {
 
 .main-profile {
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .profile-pic {
@@ -98,11 +96,26 @@ p {
         width: 100%;
         height: auto;
         position: relative;
+        padding-top: 0;
     }
 
     .sidebar ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .sidebar.open ul {
         display: flex;
-        justify-content: space-around;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #ffffff;
+        padding: 10px;
+        background-color: #1f1f1f;
+        text-align: center;
     }
 
     .content {
