@@ -14,6 +14,7 @@ body {
     background-color: #1f1f1f;
     padding-top: 20px;
     text-align: center;
+    transition: width 0.3s;
 }
 
 .sidebar ul {
@@ -29,10 +30,16 @@ body {
     color: #ffffff;
     text-decoration: none;
     font-size: 18px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: color 0.3s, background-color 0.3s;
     padding: 10px;
     border-radius: 50px;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
 }
 
 .sidebar ul li a:hover {
@@ -43,22 +50,23 @@ body {
 .content {
     margin-left: 240px;
     padding: 20px;
+    transition: margin-left 0.3s;
 }
 
 .main-profile {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
 .profile-pic {
-    width: 400px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     border: 5px solid #1e90ff;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     color: #1e90ff;
     margin-top: 20px;
 }
@@ -82,4 +90,40 @@ section.show {
 p {
     line-height: 1.6;
     color: #d3d3d3;
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .main-profile {
+        margin-top: 5%;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
 }
