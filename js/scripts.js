@@ -51,4 +51,12 @@ document.addEventListener('DOMContentLoaded', function() {
             y: 50
         });
     });
+
+    // Toggle sidebar menu on mobile
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+    });
 });
