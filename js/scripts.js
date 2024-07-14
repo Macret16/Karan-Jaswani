@@ -35,8 +35,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.getElementById(targetId);
 
             gsap.to(window, { duration: 1, scrollTo: { y: targetSection.offsetTop, autoKill: false } });
+            toggleSidebar(); // Close sidebar after clicking on a link
         });
     });
+
+    // Toggle sidebar menu on mobile
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    menuToggle.addEventListener('click', toggleSidebar);
+
+    function toggleSidebar() {
+        sidebar.classList.toggle('open');
+    }
 
     // ScrollTrigger animations for sections
     gsap.utils.toArray("section").forEach(section => {
@@ -50,13 +61,5 @@ document.addEventListener('DOMContentLoaded', function() {
             opacity: 0,
             y: 50
         });
-    });
-
-    // Toggle sidebar menu on mobile
-    const menuToggle = document.querySelector('.menu-toggle');
-    const sidebar = document.querySelector('.sidebar');
-
-    menuToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('open');
     });
 });
