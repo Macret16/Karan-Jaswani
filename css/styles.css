@@ -1,0 +1,322 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* Style for the message */
+.rotate-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    z-index: 9999;
+    box-sizing: border-box;
+}
+
+/* Show the message only in portrait mode */
+@media (orientation: portrait) {
+    .rotate-message {
+        display: block;
+    }
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #181818;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: #4caf50;
+    width: 0;
+    z-index: 999;
+}
+
+/* General Section Styling */
+section {
+    min-height: 100vh; /* Ensures each section takes at least the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 0; /* Add padding to give sections breathing space */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+section.visible {
+    opacity: 1;
+}
+
+/* Home Section */
+.hero {
+    background-color: #181818;
+    display: flex;
+    align-items: center; /* Vertically align content */
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Vertically align content */
+    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+    max-width: 1200px; /* Limit width to maintain layout */
+    margin: 0 auto; /* Center container */
+    padding: 20px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 50%; /* Ensure text does not exceed half the width */
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    margin-left: 4%;
+    text-align: left;
+}
+
+.hero-text h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 4%;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0;
+    margin-left: 4%;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+    border-color: #f0f0f0;
+}
+
+/* About Me Section */
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about p {
+    align-items: center; /* Vertically align content */
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+        /* Vertically align content */
+    flex-direction: column;
+    gap: 20px;
+}
+
+.education, .experience {
+    align-items: center;
+        /* Vertically align content */
+    text-align: center;
+}
+
+.experience p{
+    display: contents;
+    line-height:normal;
+}
+
+.education h3, .experience h3 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Skills Section */
+.skills h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.skills ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-item {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.project-item h3 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 1.1em;
+}
+
+/* Contact Section */
+.contact h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 1.8em;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: #4caf50;
+    width: 0;
+    z-index: 999;
+    transition: width 3.0s;
+}
+
+.no-underline{
+    text-decoration: none;
+}
+
+/* Button Css  */
+.button-30 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+.button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
